@@ -1,0 +1,27 @@
+body{
+    background-color: darkgray !important;
+}
+
+#match-img{
+    max-width: 480px;
+    max-height: 480px;
+}
+
+.jumbotron {
+    text-align: center !important;
+}
+
+.splash{
+    margin-top: 50%;
+    transform: translateY(-75%);
+}
+
+.survey{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+
+#formInfoHeader{
+    padding-top: 15px;
+}

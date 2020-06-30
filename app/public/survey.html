@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>FriendFinder</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+</head>
+
+<body style="background: darkgrey;">
+
+  <div class="container bg-light survey">
+    <h2 id="formInfoHeader"><strong>Your Info:</strong></h2>
+    <h6>Name (Required)</h6>
+    <input type="text" id="name" class="form-control" required>
+
+    <h6>Link to Photo Image (Required)</h6>
+    <input type="text" id="photo" class="form-control" required>
+
+    <br>
+    <div class="container" style="text-align: center;">
+      <h5><strong>Question 1</strong></h5>
+      <h6>You enjoy walking in the rain.</h6>
+      <select class="chosen-select" id="q1">
+        <option value="1">1 (Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Agree)</option>
+      </select>
+      <br><br>
+      <h5><strong>Question 2</strong></h5>
+      <h6>You do not care about your appearance.</h6>
+      <select class="chosen-select" id="q2">
+        <option value="1">1 (Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Agree)</option>
+      </select>
+      <br><br>
+      <h5><strong>Question 3</strong></h5>
+      <h6>You are calm under pressure.</h6>
+      <select class="chosen-select" id="q3">
+        <option value="1">1 (Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Agree)</option>
+      </select>
+      <br><br>
+      <h5><strong>Question 4</strong></h5>
+      <h6>You are unimaginative and milquetoast.</h6>
+      <select class="chosen-select" id="q4">
+        <option value="1">1 (Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Agree)</option>
+      </select>
+      <br><br>
+      <h5><strong>Question 5</strong></h5>
+      <h6>You get upset with minor inconveniences.</h6>
+      <select class="chosen-select" id="q5">
+        <option value="1">1 (Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Agree)</option>
+      </select>
+      <br><br>
+      <h5><strong>Question 6</strong></h5>
+      <h6>You flap like a bird from 10:00 to 10:03 PM.</h6>
+      <select class="chosen-select" id="q6">
+        <option value="1">1 (Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Agree)</option>
+      </select>
+      <br><br>
+      <h5><strong>Question 7</strong></h5>
+      <h6>You give sand to the sand gods.</h6>
+      <select class="chosen-select" id="q7">
+        <option value="1">1 (Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Agree)</option>
+      </select>
+      <br><br>
+      <h5><strong>Question 8</strong></h5>
+      <h6>You are a snake person inside of a human robot.</h6>
+      <select class="chosen-select" id="q8">
+        <option value="1">1 (Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Agree)</option>
+      </select>
+      <br><br>
+      <h5><strong>Question 9</strong></h5>
+      <h6>You do not know about the snake people.</h6>
+      <select class="chosen-select" id="q9">
+        <option value="1">1 (Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Agree)</option>
+      </select>
+      <br><br>
+      <h5><strong>Question 10</strong></h5>
+      <h6>You enjoy watching the stars.</h6>
+      <select class="chosen-select" id="q10">
+        <option value="1">1 (Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Agree)</option>
+      </select>
+    </div>
+
+    <br>
+    <br>
+
+    <div id="container" class="mx-auto" style="width:150px">
+    <button type="submit" class="mx-auto btn btn-success btn-lg" style="width:150px" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
+     Submit</button>
+    </div>
+    <br>
+
+  </div>
+
+  <div id="results-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title"><strong>Your Best Match:</strong></h2>
+        </div>
+        <div class="modal-body">
+          <h2 id="match-name"></h2>
+          <img id="match-img" src="" style="max-width: 480px; max-height: 480px;" alt="">
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    
+    var config = {
+      ".chosen-select": {},
+      ".chosen-select-deselect": {
+        allow_single_deselect: true
+      },
+      ".chosen-select-no-single": {
+        disable_search_threshold: 10
+      },
+      ".chosen-select-no-results": {
+        no_results_text: "Oops, nothing found!"
+      },
+      ".chosen-select-width": {
+        width: "95%"
+      }
+    };
+
+    for (var selector in config) {
+      $(selector).chosen(config[selector]);
+    }
+
+    $("#submit").on("click", function(event) {
+      event.preventDefault();
+
+      function validateForm() {
+        var isValid = true;
+        $(".form-control").each(function() {
+          if ($(this).val() === "") {
+            isValid = false;
+          }
+        });
+
+        $(".chosen-select").each(function() {
+
+          if ($(this).val() === "") {
+            isValid = false;
+          }
+        });
+        return isValid;
+      }
+
+      if (validateForm()) {
+        var userData = {
+          name: $("#name").val(),
+          photo: $("#photo").val(),
+          scores: [
+            $("#q1").val(),
+            $("#q2").val(),
+            $("#q3").val(),
+            $("#q4").val(),
+            $("#q5").val(),
+            $("#q6").val(),
+            $("#q7").val(),
+            $("#q8").val(),
+            $("#q9").val(),
+            $("#q10").val()
+          ]
+        };
+
+        $.post("/api/friends", userData, function(data) {
+
+          $("#match-name").text(data.name);
+          $("#match-img").attr("src", data.photo);
+
+          $("#results-modal").modal("toggle");
+
+        });
+      } else {
+        alert("Please fill out all fields before submitting!");
+      }
+    });
+  </script>
+
+</body>
+
+</html>
